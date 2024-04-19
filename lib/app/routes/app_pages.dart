@@ -2,8 +2,16 @@ import 'package:get/get.dart';
 
 import '../modules/bookmark/bindings/bookmark_binding.dart';
 import '../modules/bookmark/views/bookmark_view.dart';
+import '../modules/buku/bindings/buku_binding.dart';
+import '../modules/buku/views/buku_view.dart';
 import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
+import '../modules/detailbuku/bindings/detailbuku_binding.dart';
+import '../modules/detailbuku/views/detailbuku_view.dart';
+import '../modules/detailpeminjaman/bindings/detailpeminjaman_binding.dart';
+import '../modules/detailpeminjaman/views/detailpeminjaman_view.dart';
+import '../modules/historypeminjaman/bindings/historypeminjaman_binding.dart';
+import '../modules/historypeminjaman/views/historypeminjaman_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -68,6 +76,26 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.BUKU,
+      page: () => const BukuView(),
+      binding: BukuBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAILBUKU,
+      page: () => const DetailbukuView(),
+      binding: DetailbukuBinding(),
+    ),
+    GetPage(
+      name: _Paths.HISTORYPEMINJAMAN,
+      page: () => const HistorypeminjamanView(),
+      binding: HistorypeminjamanBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAILPEMINJAMAN,
+      page: () => const DetailpeminjamanView(),
+      binding: DetailpeminjamanBinding(),
     ),
   ];
 }

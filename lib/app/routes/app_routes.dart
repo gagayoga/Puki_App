@@ -11,6 +11,10 @@ abstract class Routes {
   static const DASHBOARD = _Paths.DASHBOARD;
   static const BOOKMARK = _Paths.BOOKMARK;
   static const PROFILE = _Paths.PROFILE;
+  static const BUKU = _Paths.BUKU;
+  static const DETAILBUKU = _Paths.DETAILBUKU;
+  static const HISTORYPEMINJAMAN = _Paths.HISTORYPEMINJAMAN;
+  static const DETAILPEMINJAMAN = _Paths.DETAILPEMINJAMAN;
 }
 
 abstract class _Paths {
@@ -23,4 +27,8 @@ abstract class _Paths {
   static const DASHBOARD = '/dashboard';
   static const BOOKMARK = '/bookmark';
   static const PROFILE = '/profile';
+  static const BUKU = '/buku';
+  static const DETAILBUKU = '/detailbuku';
+  static const HISTORYPEMINJAMAN = '/historypeminjaman';
+  static const DETAILPEMINJAMAN = '/detailpeminjaman';
 }

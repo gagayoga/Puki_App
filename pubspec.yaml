@@ -26,6 +26,8 @@ dependencies:
   flutter_svg: ^2.0.10+1
   flutter_launcher_icons: ^0.13.1
   flutter_image_slideshow: ^0.1.6
+  flutter_rating_bar: ^4.0.1
+  intl: ^0.17.0
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
@@ -45,4 +47,6 @@ flutter:
     - assets/images/
     - assets/images/splash/
     - assets/images/logo/
+    - assets/images/slider/
+    - assets/images/konten/
 

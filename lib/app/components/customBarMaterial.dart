@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomBottomBarMaterial extends StatelessWidget {
 
-  final Color colorIcon = Color(0xFFFFFFFF);
-  final Color colorSelect = Color(0xFF383838);
-  final Color colorBackground = Color(0xFFFFC533);
+  final Color colorIcon = const Color(0xFFFFFFFF);
+  final Color colorSelect = const Color(0xFF383838);
+  final Color colorBackground = const Color(0xFFFFC533);
   final int currentIndex;
   final Function(int) onTap;
 
@@ -30,27 +31,27 @@ class CustomBottomBarMaterial extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       backgroundColor: colorBackground,
       selectedFontSize: 14,
-      selectedLabelStyle: TextStyle(
+      selectedLabelStyle: GoogleFonts.lato(
           fontWeight: FontWeight.w700
       ),
-      iconSize: 24,
-      showUnselectedLabels: false,
+      iconSize: 26,
+      showUnselectedLabels: true,
       items: [
         _bottomNavigationBarItem(
           icon: Icons.house_rounded,
           label: 'Home',
         ),
         _bottomNavigationBarItem(
-          icon: Icons.bookmark,
-          label: 'Bookmark',
-        ),
-        _bottomNavigationBarItem(
           icon: Icons.explore,
           label: 'Explore',
         ),
         _bottomNavigationBarItem(
-          icon: Icons.person_2_rounded,
-          label: 'Profile',
+          icon: Icons.bookmark,
+          label: 'Bookmark',
+        ),
+        _bottomNavigationBarItem(
+          icon: FontAwesomeIcons.clockRotateLeft,
+          label: 'History',
         ),
       ],
     );

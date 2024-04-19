@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../data/constant/endpoint.dart';
-import '../../../data/model/response_login.dart';
+import '../../../data/model/user/response_login.dart';
 import '../../../data/provider/api_provider.dart';
 import '../../../data/provider/storage_provider.dart';
 import '../../../routes/app_pages.dart';
@@ -54,7 +54,10 @@ class LoginController extends GetxController {
           await StorageProvider.write(StorageKey.username, responseLogin.data!.username.toString());
           await StorageProvider.write(StorageKey.tokenUser, responseLogin.data!.token.toString());
           await StorageProvider.write(StorageKey.idUser, responseLogin.data!.id.toString());
-          // Get.offAllNamed(Routes.LAYOUT);
+          await StorageProvider.write(StorageKey.email, responseLogin.data!.email.toString());
+          await StorageProvider.write(StorageKey.bio, responseLogin.data!.bio.toString());
+          await StorageProvider.write(StorageKey.namaLengkap, responseLogin.data!.namaLengkap.toString());
+          await StorageProvider.write(StorageKey.telepon, responseLogin.data!.telepon.toString());
 
           String username =  StorageProvider.read(StorageKey.username);
           _showMyDialog(
@@ -149,5 +152,4 @@ class LoginController extends GetxController {
             )
     );
   }
-
 }

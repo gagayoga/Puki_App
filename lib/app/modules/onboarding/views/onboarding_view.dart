@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +21,12 @@ class OnboardingView extends GetView<OnboardingController> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
+    const Color background = Color(0xFF393838);
 
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+      statusBarColor: background,
+      statusBarIconBrightness: Brightness.light,// Change this color as needed
+    ));
 
     return Scaffold(
 

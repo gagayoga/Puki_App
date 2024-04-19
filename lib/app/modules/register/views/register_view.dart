@@ -1,5 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -39,7 +40,7 @@ class RegisterView extends GetView<RegisterController> {
                   padding: const EdgeInsets.only(top: 20),
                   child: SizedBox(
                     height: height * 0.25,
-                      child: Image.asset('assets/images/logo_textdark.png')
+                      child: SvgPicture.asset('assets/images/logo/logo_puki.svg')
                   ),
                 ),
 
@@ -111,7 +112,7 @@ class RegisterView extends GetView<RegisterController> {
                               ),
 
                               SizedBox(
-                                height: height * 0.015,
+                                height: height * 0.025,
                               ),
 
                               TextFormField(
@@ -161,7 +162,7 @@ class RegisterView extends GetView<RegisterController> {
                               ),
 
                               SizedBox(
-                                height: height * 0.015,
+                                height: height * 0.025,
                               ),
 
                               Obx(() =>
@@ -281,7 +282,7 @@ class RegisterView extends GetView<RegisterController> {
                                       'Sudah punya akun?',
                                       style: GoogleFonts.lato(
                                           fontSize: text1,
-                                          fontWeight: FontWeight.w600,
+                                          fontWeight: FontWeight.w500,
                                           color: Colors.grey),
                                     ),
                                     const SizedBox(
